@@ -56,6 +56,7 @@ public static void coinflip(){
     } else {
         System.out.println("You lose!");
     }
+    // heads or tails
 
 
 }
