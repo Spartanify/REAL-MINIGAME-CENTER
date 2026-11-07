@@ -23,11 +23,14 @@ public class App {
         System.out.println("Black Jack");
     } else if (choice == 3){
         coinflip(input);
+    } else {
+        System.out.println("Invalid choice. Please try again.");
+        }
     }
     
         }
     
-    }
+    
     
     public static void coinflip(Scanner input){
     boolean playAgain = true;

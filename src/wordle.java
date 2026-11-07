@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class wordle {
-    public static final String GREEN = "\033[42;30m";
-    private static final String YELLOW = "\033[43;30m";
-    private static final String GRAY = "\033[100;97m";
+    public static final String GREEN = "\033[42m";
+    private static final String YELLOW = "\033[43m";
+    private static final String GRAY = "\033[100m";
     private static final String RESET = "\033[0m";
 
 
