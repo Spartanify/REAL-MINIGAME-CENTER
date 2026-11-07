@@ -1,10 +1,12 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
+        boolean running = true;
         Scanner input = new Scanner(System.in);
         
+        while (running) {
         System.out.println("====Mini Game Center====");
-        System.out.println("1: Guess Word");
+        System.out.println("1: Wordle");
         System.out.println("2: Black Jack");
         System.out.println("3: Coinflip");
         
@@ -12,22 +14,27 @@ public class App {
         
         System.out.print("Enter your choice: ");
         int choice = input.nextInt();
+        input.nextLine();
         
 
         if (choice == 1){
-        System.out.println("Guess Word");
+        wordle.play(input);
     } else if (choice == 2){
         System.out.println("Black Jack");
     } else if (choice == 3){
-        coinflip();
+        coinflip(input);
     }
-
-        input.close();
     
-}
+        }
+    
+    }
+    
+    public static void coinflip(Scanner input){
+    boolean playAgain = true;
 
-public static void coinflip(){
-    Scanner inp = new Scanner(System.in);
+    while (playAgain) {
+    // Scanner inp = new Scanner(System.in);
+    
 
 
     System.out.println("COINFLIP");
@@ -35,7 +42,7 @@ public static void coinflip(){
     System.out.println("2: Tails");
     System.out.println("Choose heads or tails: ");
 
-    int userChoice = inp.nextInt();
+    int userChoice = input.nextInt();
 
     
     
@@ -59,6 +66,18 @@ public static void coinflip(){
     // heads or tails
     // heads or tails again
 
+            System.out.println("1: Play Coinflip again");
+            System.out.println("2: Back to menu");
+            System.out.print("Enter your choice: ");
+
+            int replayChoice = input.nextInt();
+            input.nextLine();
+
+            if (replayChoice == 2) {
+                playAgain = false;
+            }
+
+    }
 
 }
 }
